@@ -251,8 +251,6 @@ RUN set -ex; \
 	wp --allow-root --version
 {{ ) end -}}
 
-# VOLUME /var/www/html
-
 {{ if env.version != "cli" then ( -}}
 COPY --chown=www-data:www-data wp-config-docker.php /usr/src/wordpress/
 {{ ) else "" end -}}
